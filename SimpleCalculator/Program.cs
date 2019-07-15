@@ -15,17 +15,27 @@ namespace SimpleCalculator
 
             do
             {
-                Console.Write("Select operation: +, -, *, /, ^, sqrt. Enter \"stop\", if you want to close calculator: ");
+                Console.Write("\nSelect operation: +, -, *, /, ^, sqrt. Enter \"stop\", if you want to close calculator: ");
                 userAnswer = Console.ReadLine();
+                double firstNumber;
+                double secondNumber;
 
                 switch (userAnswer)
                 {
                     case "+":
-                        Console.Write("Enter first number: ");
-                        double firstNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("\nEnter first number: ");
+                        firstNumber = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Enter second number: ");
-                        double secondNumber = Convert.ToDouble(Console.ReadLine());
+                        secondNumber = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+                        break;
+
+                    case "-":
+                        Console.Write("\nEnter first number: ");
+                        firstNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        secondNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
                         break;
                 }
             }
