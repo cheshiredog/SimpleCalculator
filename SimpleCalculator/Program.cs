@@ -17,8 +17,7 @@ namespace SimpleCalculator
             {
                 Console.Write("\nSelect operation: +, -, *, /, ^, sqrt. Enter \"stop\", if you want to close calculator: ");
                 userAnswer = Console.ReadLine();
-                double firstNumber;
-                double secondNumber;
+                double firstNumber, secondNumber;
 
                 switch (userAnswer)
                 {
@@ -59,6 +58,14 @@ namespace SimpleCalculator
                         }
 
                         Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+                        break;
+
+                    case "^":
+                        Console.Write("\nEnter a number: ");
+                        firstNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter a exponent: ");
+                        secondNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine($"{firstNumber} ^ {secondNumber} = {Math.Pow(firstNumber, secondNumber)}");
                         break;
                 }
             }
