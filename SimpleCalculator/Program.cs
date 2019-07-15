@@ -81,6 +81,11 @@ namespace SimpleCalculator
                         Console.WriteLine($"sqrt({firstNumber}) = {Math.Sqrt(firstNumber)}");
                         break;
 
+                    case "stop":
+                        Console.WriteLine("Goodbye!");
+                        Console.ReadKey();
+                        break;
+
                     default:
                         Console.WriteLine("Unknown operation.");
                         break;
