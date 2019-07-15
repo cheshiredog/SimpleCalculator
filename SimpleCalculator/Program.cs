@@ -80,6 +80,10 @@ namespace SimpleCalculator
 
                         Console.WriteLine($"sqrt({firstNumber}) = {Math.Sqrt(firstNumber)}");
                         break;
+
+                    default:
+                        Console.WriteLine("Unknown operation.");
+                        break;
                 }
             }
 
