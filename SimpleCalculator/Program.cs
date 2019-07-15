@@ -10,6 +10,29 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Calculator");
+            string userAnswer;
+
+            do
+            {
+                Console.Write("Select operation: +, -, *, /, ^, sqrt. Enter \"stop\", if you want to close calculator: ");
+                userAnswer = Console.ReadLine();
+
+                switch (userAnswer)
+                {
+                    case "+":
+                        Console.Write("Enter first number: ");
+                        double firstNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        double secondNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+                        break;
+                }
+            }
+
+            while (userAnswer != "stop");
+
+
         }
     }
 }
