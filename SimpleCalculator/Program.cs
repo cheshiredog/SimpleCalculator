@@ -45,6 +45,21 @@ namespace SimpleCalculator
                         secondNumber = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
                         break;
+
+                    case "/":
+                        Console.Write("\nEnter first number: ");
+                        firstNumber = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        secondNumber = Convert.ToDouble(Console.ReadLine());
+
+                        if (secondNumber == 0)
+                        {
+                            Console.WriteLine("The second number cannot be zero.");
+                            break;
+                        }
+
+                        Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+                        break;
                 }
             }
 
