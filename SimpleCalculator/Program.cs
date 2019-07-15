@@ -67,6 +67,19 @@ namespace SimpleCalculator
                         secondNumber = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine($"{firstNumber} ^ {secondNumber} = {Math.Pow(firstNumber, secondNumber)}");
                         break;
+
+                    case "sqrt":
+                        Console.Write("\nEnter a number: ");
+                        firstNumber = Convert.ToDouble(Console.ReadLine());
+
+                        if (firstNumber < 0)
+                        {
+                            Console.WriteLine("It is impossible to extract the square root of a negative number.");
+                            break;
+                        }
+
+                        Console.WriteLine($"sqrt({firstNumber}) = {Math.Sqrt(firstNumber)}");
+                        break;
                 }
             }
 
